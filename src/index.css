@@ -1,0 +1,24 @@
+:root {
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color: rgba(255, 255, 255, 0.87);
+    background: #333;
+}
+
+.container {
+    width: 300px;
+    margin: 20vh auto;
+}
+
+.card {
+    padding: 10px;
+    border-radius: 10px;
+    background: #222;
+}
+
+.card + .card {
+    margin-top: 10px;
+}
