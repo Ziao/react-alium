@@ -7,7 +7,8 @@ export const useFruitStore = createStore({
         a: 3,
     }),
     actions: {
-        // Actions cannot use arrow functions due to `this` referring to state
+        // `this` refers to the proxied store
+        // Actions cannot use arrow functions due to `this`
         buyFruit(payload: { amount: number }) {
             const price = payload.amount * 5;
             if (payload.amount > this.fruitAvailable) return;
@@ -18,15 +19,9 @@ export const useFruitStore = createStore({
         },
     },
     getters: {
+        // `this` refers to state only
         canBuyAmount() {
-            // this.
             return Math.min(this.fruitAvailable, this.money / 5);
         },
     },
-    // setters?
 });
-
-// Get rid of bind - should be done in createStore
-
-// todo: no payload completion
-// useFruitStore().actions.buyFruit.bind(useFruitStore().state)({ amount: 1, reason: 1 });
