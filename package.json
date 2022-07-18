@@ -6,7 +6,10 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "docs:build": "mkdocs build",
+        "docs:deploy": "mkdocs gh-deploy",
+        "docs:serve": "mkdocs serve"
     },
     "prettier": {
         "arrowParens": "always",
