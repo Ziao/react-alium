@@ -1,9 +1,9 @@
 // import { useEffect } from "react";
 // import { useFruitStore } from "./lib/store";
 
-// import { useCandyStore } from "./lib/puya/provider";
+// import { useCandyStore } from "./lib/alium/provider";
 
-import { useCandyStore } from "./lib/puya/provider";
+import { useCandyStore } from "./lib/alium/provider";
 
 function App() {
     // const { fruitAvailable, money, buyFruit, canBuyAmount } = useFruitStore();

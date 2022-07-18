@@ -1,4 +1,4 @@
-export class CollusionHandler {
+export class CollisionHandler {
     keys: Record<string, string[]> = {};
 
     addKeys(scope: string, keys: string[]) {

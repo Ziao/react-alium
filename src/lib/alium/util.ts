@@ -1,6 +1,6 @@
-import { PuyaActions2 } from "./provider";
+import { AliumActions } from "./types";
 
-export const bindActionsToStore = <C>(actions: PuyaActions2, context: C) => {
+export const bindActionsToStore = <C>(actions: AliumActions, context: C) => {
     return Object.keys(actions).reduce((newActions, actionName) => {
         newActions[actionName] = actions[actionName].bind(context);
         return newActions;
